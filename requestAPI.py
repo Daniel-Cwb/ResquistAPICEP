@@ -20,12 +20,12 @@ def main():
     else:
         print('Quantidade de caracter está Correta!')
 
-    r = requests.get('viacep.com.br/ws/{}}/json/'.format(cep))
+    r = requests.get('https://viacep.com.br/ws/{}/json/'.format(cep))
 
     #
     # Validando se o CEP está correto
     #
-    result_data = request.json()
+    result_data = r.json()
 
     #
     # Validando se o resultado não contém erro
